@@ -83,6 +83,10 @@ void setMode(MODE mode, bool selfLoading)
     custom.setup();
     buttonModeCount = 8;
   }
+  else if (mode == WEATHER)
+  {
+    weatherSetup();
+  }
 
   delay(800);
   currentMode = mode;
@@ -126,6 +130,10 @@ MODE getModeByString(String mode)
   else if (mode == "custom")
   {
     return CUSTOM;
+  }
+  else if (mode == "weather")
+  {
+    return WEATHER;
   }
   return NONE;
 }
