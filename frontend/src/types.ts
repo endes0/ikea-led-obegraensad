@@ -12,6 +12,7 @@ export enum MODE {
   CUSTOM = 'custom',
   UPDATE = 'update',
   LOADING = 'loading',
+  WEATHER = 'weather',
 }
 
 export interface Store {
