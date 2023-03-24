@@ -218,6 +218,11 @@ void Screen_::drawNumbers(int x, int y, std::vector<int> numbers)
   }
 }
 
+void Screen_::drawWeather(int x, int y, int weather)
+{
+    this->drawCharacter(x, y, this->readBytes(weatherIcons[weather]), 16);
+}
+
 Screen_ &Screen_::getInstance()
 {
   static Screen_ instance;
