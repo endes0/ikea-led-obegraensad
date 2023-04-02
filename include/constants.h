@@ -13,8 +13,8 @@
 #define ENABLE_STORAGE
 
 #ifdef ENABLE_SERVER
-#define NTP_SERVER "de.pool.ntp.org"
-#define TZ_INFO "WEST-1DWEST-2,M3.5.0/02:00:00,M10.5.0/03:00:00"
+#define NTP_SERVER "es.pool.ntp.org"
+#define TZ_INFO "WET0WEST,M3.5.0/1,M10.5.0"
 #endif
 
 #define COLS 16
