@@ -220,6 +220,13 @@ void Screen_::drawNumbers(int x, int y, std::vector<int> numbers)
   }
 }
 
+void Screen_::drawBigNumbers(int x, int y, std::vector<int> numbers)
+{
+  for (int i = 0; i < numbers.size(); i++) {
+    this->drawCharacter(x + (i * 8), y, this->readBytes(bigNumbers[numbers.at(i)]), 8);
+  }
+}
+
 unsigned int Screen_::getCurrentBrightness() const
 {
   return this->brightness;
