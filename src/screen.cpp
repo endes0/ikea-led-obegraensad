@@ -220,6 +220,11 @@ void Screen_::drawNumbers(int x, int y, std::vector<int> numbers)
   }
 }
 
+void Screen_::drawWeather(int x, int y, int weather)
+{
+    this->drawCharacter(x, y, this->readBytes(weatherIcons[weather]), 16);
+}
+
 void Screen_::drawBigNumbers(int x, int y, std::vector<int> numbers)
 {
   for (int i = 0; i < numbers.size(); i++) {

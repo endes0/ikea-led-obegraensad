@@ -89,6 +89,10 @@ void setMode(MODE mode, bool selfLoading)
     custom.setup();
     buttonModeCount = 9;
   }
+  else if (mode == WEATHER)
+  {
+    weatherSetup();
+  }
 
   delay(800);
   currentMode = mode;
@@ -136,6 +140,10 @@ MODE getModeByString(String mode)
   else if (mode == "custom")
   {
     return CUSTOM;
+  }
+  else if (mode == "weather")
+  {
+    return WEATHER;
   }
   return NONE;
 }
@@ -260,6 +268,12 @@ void loopOfAllModes()
     {
 #ifdef ENABLE_SERVER
       bigClock.loop();
+#endif
+    }
+    if (currentMode == WEATHER)
+    {
+#ifdef ENABLE_SERVER
+      weatherLoop();
 #endif
     }
   }
